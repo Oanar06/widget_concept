@@ -15,50 +15,29 @@ class MyApp extends StatelessWidget {
   }
 }
 
+Container containerOlustur(String harf, Color renk, {double margin=0}) {
+  return Container(
+    width: 75,
+    height: 75,
+    alignment: Alignment.center,
+    margin: EdgeInsets.only(top: margin),
+    color:renk,
+    child: Text(
+      harf,
+      style: TextStyle(fontSize: 64),
+    ),
+  );
+}
+
 Row dartRowunuOlustur() {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
-      Container(
-        width: 75,
-        height: 75,
-        alignment: Alignment.center,
-        color: Colors.blue.shade200,
-        child: Text(
-          'D',
-          style: TextStyle(fontSize: 64),
-        ),
-      ),
-      Container(
-        width: 75,
-        height: 75,
-        alignment: Alignment.center,
-        color: Colors.blue.shade400,
-        child: Text(
-          'A',
-          style: TextStyle(fontSize: 64),
-        ),
-      ),
-      Container(
-        width: 75,
-        height: 75,
-        alignment: Alignment.center,
-        color: Colors.blue.shade600,
-        child: Text(
-          'R',
-          style: TextStyle(fontSize: 64),
-        ),
-      ),
-      Container(
-        width: 75,
-        height: 75,
-        alignment: Alignment.center,
-        color: Colors.blue.shade800,
-        child: Text(
-          'T',
-          style: TextStyle(fontSize: 64),
-        ),
-      ),
+     containerOlustur('D', Colors.blue.shade100),
+     containerOlustur('A', Colors.blue.shade300),
+     containerOlustur('R', Colors.blue.shade500),
+     containerOlustur('T', Colors.blue.shade700),
+      
     ],
   );
 }
@@ -68,95 +47,25 @@ Column dersleriColumnOlustur() {
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: [
       Expanded(
-        child: Container(
-          width: 75,
-          height: 75,
-          alignment: Alignment.center,
-          margin: EdgeInsets.only(top: 15),
-          color: Colors.blue.shade200,
-          child: Text(
-            'E',
-            style: TextStyle(fontSize: 64),
-          ),
-        ),
+        child: containerOlustur('E', Colors.blue.shade200, margin: 15),  
       ),
       Expanded(
-        child: Container(
-          width: 75,
-          height: 75,
-          alignment: Alignment.center,
-          margin: EdgeInsets.only(top: 15),
-          color: Colors.blue.shade300,
-          child: Text(
-            'R',
-            style: TextStyle(fontSize: 64),
-          ),
-        ),
+        child: containerOlustur('R', Colors.blue.shade300, margin: 15),
       ),
       Expanded(
-        child: Container(
-          width: 75,
-          height: 75,
-          alignment: Alignment.center,
-          margin: EdgeInsets.only(top: 15),
-          color: Colors.blue.shade400,
-          child: Text(
-            'S',
-            style: TextStyle(fontSize: 64),
-          ),
-        ),
+        child: containerOlustur('S', Colors.blue.shade400, margin: 15),
       ),
       Expanded(
-        child: Container(
-          width: 75,
-          height: 75,
-          alignment: Alignment.center,
-          margin: EdgeInsets.only(top: 15),
-          color: Colors.blue.shade500,
-          child: Text(
-            'L',
-            style: TextStyle(fontSize: 64),
-          ),
-        ),
+        child: containerOlustur('L', Colors.blue.shade500, margin: 15),
       ),
       Expanded(
-        child: Container(
-          width: 75,
-          height: 75,
-          alignment: Alignment.center,
-          margin: EdgeInsets.only(top: 15),
-          color: Colors.blue.shade600,
-          child: Text(
-            'E',
-            style: TextStyle(fontSize: 64),
-          ),
-        ),
+        child: containerOlustur('E', Colors.blue.shade600, margin: 15),
       ),
       Expanded(
-        child: Container(
-          width: 75,
-          height: 75,
-          alignment: Alignment.center,
-          margin: EdgeInsets.only(top: 15),
-          color: Colors.blue.shade700,
-          child: Text(
-            'R',
-            style: TextStyle(fontSize: 64),
-          ),
-        ),
+        child: containerOlustur('R', Colors.blue.shade700, margin: 15),
       ),
       Expanded(
-        child: Container(
-          width: 75,
-          height: 75,
-          alignment: Alignment.center,
-          margin: EdgeInsets.only(top: 15),
-          color: Colors.blue.shade800,
-          child: Text(
-            'İ',
-            style: TextStyle(fontSize: 64),
-          ),
-        ),
+        child: containerOlustur('I', Colors.blue.shade800, margin: 15),
       ),
     ],
   );
